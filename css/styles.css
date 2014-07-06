@@ -1,1 +1,5 @@
-
+/* remove all uppercase menu headers */
+.pure-menu-heading
+{
+  text-transform: none !important;
+}
