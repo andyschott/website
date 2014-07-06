@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Andy Schott's Website</title>
+<link rel="stylesheet" href="css/pure-min.css">
+<!--[if lte IE 8]>
+  <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="css/layouts/side-menu.css">
+<!--<![endif]-->
+
+<link rel="stylesheet" href="css/styles.css">
+
+<title>About Andy Schott</title>
 </head>
 
-<h1>Andy Schott's Website</h1>
+<body>
 
-<p>Hello, World.</p>
+<div id="layout">
+  <!-- Menu toggle -->
+  <a href="#menu" id="menuLink" class="menu-link">
+    <span></span>
+  </a>
 
+  <div id="menu">
+    <div class="pure-menu pure-menu-open">
+      <a class="pure-menu-heading" href="#">Andy Schott</a>
+      <ul>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="main">
+    <div class="header">
+      <h1>About Andy Schott</h1>
+    </div>
+
+    <div class="content">
+      <p>Andy graduated from <a href="http://rose-hulman.edu">Rose-Hulman Institute of Technology</a> in 2001 with a Bachelor of Science in Computer Science. He currently works for <a href="http://borland.com">Borland</a> on <a href="http://borland.com/products/silktest/">Silk Test</a>.</p>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
 </html>
