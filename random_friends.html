@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function getRandomFriendsEpisode() {
+            const seasonLengths = [
+            24,
+            24,
+            25,
+            24,
+            24,
+            25,
+            24,
+            24,
+            24,
+            18
+        ]
+
+        const season = getRandomInt(seasonLengths.length - 1) + 1;
+        const episode = getRandomInt(seasonLengths[season] - 1) + 1;
+
+        var p = document.createElement('p');
+        p.appendChild(document.createTextNode(`Season ${season}, Episode ${episode}`));
+        document.body.appendChild(p);
+        }
+    </script>
+    <body onload="getRandomFriendsEpisode()">
+        <h1>Random Friends Episode</h1>
+    </body>
+</html>
