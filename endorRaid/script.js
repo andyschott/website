@@ -78,16 +78,3 @@ function saveScore() {
     document.getElementById('aheadBehind').innerText = '';
     document.getElementById('output').innerText = '';
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    let targetScore = 0;
-
-    const targets = document.getElementsByClassName('target');
-    for (let index = 0; index < targets.length; index++) {
-        targets[index].innerText = targetScores[index].toLocaleString();
-
-        targetScore += targetScores[index];
-    }
-
-    document.getElementById('targetScore').innerText = targetScore.toLocaleString();
-});
