@@ -164,3 +164,11 @@ body {
     grid-column: 3;
     grid-row: 10;
 }
+
+table thead {
+    font-weight: bold;
+}
+
+table {
+    margin-bottom: 1em;
+}
