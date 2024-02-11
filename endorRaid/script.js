@@ -9,7 +9,7 @@ const targetScores = [
     600000
 ]
 
-function calculate() {
+function computeScore() {
     const inputs = document.getElementsByClassName('raidScore');
     let score = 0;
     let targetScore = 0;
@@ -22,6 +22,14 @@ function calculate() {
         }
     }
 
+    return {
+        score,
+        targetScore
+    };
+}
+
+function calculate() {
+    const { score, targetScore } = computeScore();
     const aheadBehind = score - targetScore;
 
     document.getElementById('output').innerText = score.toLocaleString();
@@ -34,6 +42,41 @@ function calculate() {
     else {
         aheadBehindCtrl.classList.remove('behind');
     }
+}
+
+function getSavedScores() {
+    const savedScores = window.localStorage.getItem('scores');
+    if (!savedScores) {
+        return [];
+    }
+
+    return JSON.parse(savedScores);
+}
+
+function saveScores(scores) {
+    const json = JSON.stringify(scores);
+    window.localStorage.setItem('scores', json);
+}
+
+function saveScore() {
+    const { score } = computeScore();
+
+    const currentScore = {
+        score: score,
+        date: new Date()
+    };
+
+    let scores = getSavedScores();
+    scores.push(currentScore);
+
+    saveScores(scores);
+
+    const inputs = document.getElementsByClassName('raidScore');
+    for (let index = 0; index < inputs.length; index++) {
+        inputs[index].value = '';
+    }
+    document.getElementById('aheadBehind').innerText = '';
+    document.getElementById('output').innerText = '';
 }
 
 document.addEventListener("DOMContentLoaded", () => {

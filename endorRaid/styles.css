@@ -160,12 +160,7 @@ body {
     grid-row: 9;
 }
 
-.cell101 {
-    grid-column: 1;
-    grid-row: 10;
-}
-
-.cell102 {
-    grid-column: 2;
+.save {
+    grid-column: 3;
     grid-row: 10;
 }
