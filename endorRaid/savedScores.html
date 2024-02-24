@@ -34,7 +34,7 @@
                     row.appendChild(cell);
 
                     cell = document.createElement('td');
-                    cell.innerText = savedScores[index].score;
+                    cell.innerText = savedScores[index].score.toLocaleString();
                     row.appendChild(cell);
 
                     scoresTable.appendChild(row);
